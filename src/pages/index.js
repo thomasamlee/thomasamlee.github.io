@@ -7,12 +7,15 @@ import { Container, Image } from "react-bootstrap"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 export default ({ data }) => {
-  const { unemployed, firstName, lastName, occupation } = data.site.siteMetadata
+  const { firstName, lastName, occupation } = data.site.siteMetadata
   const { dark } = useContext(ThemeContext)
+
   return (
     <PageLayout>
       <SEO title="Home" />
       <Container className="text-center pt-5 mt-5" fluid>
+        {/* Center Icon Image */}
+        {/* replace this */}
         <Image
           width="150"
           height="150"
@@ -20,11 +23,7 @@ export default ({ data }) => {
           src={dark ? `../../icons/darth-vader.png` : `../../icons/r2-d2.png`}
           alt={dark ? "Darth Vader" : "R2-D2"}
         />
-        {unemployed && (
-          <p className="mt-2">
-            <b> Hey! I am looking for new opportunities :)</b>
-          </p>
-        )}
+
         <Container className="py-0 my-0">
           <h1
             style={{
@@ -89,7 +88,7 @@ export default ({ data }) => {
             />
           </a>
           <a
-            href="mailto:johndoe@gmail.com"
+            href="mailto:thomasamlee@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -116,7 +115,6 @@ export const query = graphql`
   query {
     site {
       siteMetadata {
-        unemployed
         firstName
         lastName
         occupation

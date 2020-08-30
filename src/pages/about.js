@@ -20,7 +20,6 @@ export default ({ data }) => {
     readingList,
     showsList,
     designations,
-    unemployed,
   } = data.site.siteMetadata
   const { toString } = useContext(ThemeContext)
 
@@ -77,26 +76,27 @@ export default ({ data }) => {
           </p>
         </article>
         <article className="w-75 m-auto">
-          {unemployed && (
-            <>
-              <hr />
-              <p className="unemployed">
-                <small>
-                  I am <b>currently looking for new opportunities</b>! If you
-                  like what you <Link to="/resume">see</Link>, let's get
-                  in&nbsp;
-                  <a
-                    href="mailto:red.five@rebellion.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    touch
-                  </a>
-                  !
-                </small>
-              </p>
-            </>
-          )}
+          {/* {unemployed && ( */}
+          <>
+            <hr />
+            <p className="unemployed">
+              <small>
+                I am <b>currently looking for new opportunities</b>! If you like
+                what you <Link to="/resume">see</Link>, let's get in&nbsp;
+                <a
+                  href="mailto:red.five@rebellion.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  touch
+                </a>
+                !
+              </small>
+            </p>
+          </>
+          {/* )} */}
+
+          {/* remove this */}
           <hr />
           <h5 className="watch-list-title pt-4">
             Here are a couple of books from my reading list:
@@ -122,7 +122,6 @@ export const query = graphql`
   query {
     site {
       siteMetadata {
-        unemployed
         occupation
         author
         designations
