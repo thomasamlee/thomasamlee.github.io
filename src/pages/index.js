@@ -7,19 +7,29 @@ import { Container, Image } from "react-bootstrap"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 export default ({ data }) => {
-  const { firstName, lastName, occupation } = data.site.siteMetadata
+  const {
+    firstName,
+    lastName,
+    occupation,
+    email,
+    github,
+    linkedin,
+    resume,
+    author,
+  } = data.site.siteMetadata
   const { dark } = useContext(ThemeContext)
+  const { toString } = useContext(ThemeContext)
 
   return (
     <PageLayout>
       <SEO title="Home" />
       <Container className="text-center pt-5 mt-5" fluid>
         <Image
+          rounded
           width="150"
           height="150"
-          fluid
-          src={dark ? `../../icons/darth-vader.png` : `../../icons/r2-d2.png`}
-          alt={dark ? "Darth Vader" : "R2-D2"}
+          src={`../../icons/luke-${toString()}.png`}
+          alt={author}
         />
 
         <Container className="py-0 my-0">
@@ -40,45 +50,33 @@ export default ({ data }) => {
           </p>
         </Container>
         <hr className="my-3 w-25" />
+
+        <p className="unemployed">
+          <small>Let's get in touch!</small>
+        </p>
         <div className="d-md-inline-flex icons-container">
-          <a
-            href="https://linkedin.com/in/thomasamlee"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href={linkedin} target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon
               icon={["fab", "linkedin"]}
               className="icons linkedin"
               title="LinkedIn"
             />
           </a>
-          <a
-            href="https://github.com/thomasamlee"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href={github} target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon
               icon={["fab", "github"]}
               className="icons github"
               title="Github"
             />
           </a>
-          <a
-            href="mailto:thomasamlee@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href={`mailto:${email}`} target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon
               icon={["fas", "envelope"]}
               className="icons mail"
               title="e-mail"
             />
           </a>
-          <a
-            href="https://drive.google.com/file/d/10rT2x0vePmtaufYAGagAQkVve-Mb56Au/view?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href={resume} target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon
               icon={["fas", "file-alt"]}
               className="icons file"
@@ -98,6 +96,12 @@ export const query = graphql`
         firstName
         lastName
         occupation
+        email
+        github
+        linkedin
+        occupation
+        resume
+        author
       }
     }
   }
