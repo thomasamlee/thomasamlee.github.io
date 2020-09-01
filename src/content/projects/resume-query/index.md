@@ -1,6 +1,6 @@
 ---
-title: "Hello World"
-tags: ["Project", "Hello", "World", "Gatsby", "React", "GraphQL"]
+title: "Resume Query"
+tags: ["Gatsby", "React", "GraphQL"]
 date: "2020-05-13"
 ---
 

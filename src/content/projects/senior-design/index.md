@@ -1,9 +1,7 @@
 ---
-title: "Hello World"
-tags: ["Hello", "World", "First", "Post"]
-description: "999"
-author: "John Doe"
-date: "2020-05-12"
+title: "Senior Design"
+tags: ["Project", "Gatsby", "React", "GraphQL"]
+date: "2020-05-13"
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget augue commodo, rutrum enim vel, varius lorem. Ut nec sem metus. Cras laoreet, metus consectetur mollis consectetur, dui ante tempus ante, eget luctus felis odio sed leo. Sed tempus, ex ultrices porttitor fringilla, enim tellus dictum elit, quis viverra odio orci eu erat. Maecenas auctor ultrices ornare. Mauris consequat a urna in cursus.

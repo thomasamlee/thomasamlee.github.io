@@ -14,8 +14,6 @@ export default ({ data }) => {
     <PageLayout>
       <SEO title="Home" />
       <Container className="text-center pt-5 mt-5" fluid>
-        {/* Center Icon Image */}
-        {/* replace this */}
         <Image
           width="150"
           height="150"
@@ -37,25 +35,14 @@ export default ({ data }) => {
           <p>
             <i>
               {occupation} by day,&nbsp;
-              {dark ? `Imperial enforcer by night` : `Rebel scum by night`}
+              {dark ? `Imperial enforcer by night.` : `Rebel scum by night.`}
             </i>
           </p>
         </Container>
         <hr className="my-3 w-25" />
         <div className="d-md-inline-flex icons-container">
           <a
-            href="https://www.github.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FontAwesomeIcon
-              icon={["fab", "github"]}
-              className="icons github"
-              title="Github"
-            />
-          </a>
-          <a
-            href="https://linkedin.com"
+            href="https://linkedin.com/in/thomasamlee"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -66,25 +53,14 @@ export default ({ data }) => {
             />
           </a>
           <a
-            href="https://www.freecodecamp.org"
+            href="https://github.com/thomasamlee"
             target="_blank"
             rel="noopener noreferrer"
           >
             <FontAwesomeIcon
-              icon={["fab", "free-code-camp"]}
-              className="icons fcc"
-              title="FreeCodeCamp"
-            />
-          </a>
-          <a
-            href="https://www.hackerrank.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FontAwesomeIcon
-              icon={["fab", "hackerrank"]}
-              className="icons hr"
-              title="Hackerrank"
+              icon={["fab", "github"]}
+              className="icons github"
+              title="Github"
             />
           </a>
           <a
@@ -98,7 +74,11 @@ export default ({ data }) => {
               title="e-mail"
             />
           </a>
-          <a href="../../resume.pdf" target="_blank" download>
+          <a
+            href="https://drive.google.com/file/d/10rT2x0vePmtaufYAGagAQkVve-Mb56Au/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FontAwesomeIcon
               icon={["fas", "file-alt"]}
               className="icons file"
