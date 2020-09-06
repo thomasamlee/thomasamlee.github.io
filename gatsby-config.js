@@ -17,17 +17,7 @@ module.exports = {
     linkedin: "https://linkedin.com/in/thomasamlee",
     resume:
       "https://drive.google.com/file/d/10rT2x0vePmtaufYAGagAQkVve-Mb56Au/view?usp=sharing",
-    keywords: [
-      `Thomas`,
-      `Tom`,
-      `Amlee`,
-      `Personal`,
-      `Blog`,
-      `Resume`,
-      `Projects`,
-      `Work`,
-      "Portfolio",
-    ],
+    keywords: [`Thomas`, `Tom`, `Amlee`, `Personal`, `Resume`, "Portfolio"],
     siteUrl:
       process.env.URL || process.env.DEPLOY_URL || `http://localhost:8000`,
   },
