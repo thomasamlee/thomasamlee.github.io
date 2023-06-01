@@ -7,8 +7,10 @@ const nextConfig = {
   output: "export",
   basePath: "",
   experimental: {
-    appDir: true
+    appDir: true,
+    mdxRs: true
   }
 };
 
-module.exports = nextConfig;
+const withMDX = require("@next/mdx")();
+module.exports = withMDX(nextConfig);

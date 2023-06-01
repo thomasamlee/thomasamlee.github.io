@@ -1,9 +1,5 @@
-import Link from 'next/link'
+import HelloWorld from "./hello.mdx";
 
 export default function Home() {
-  return (
-    <div>
-      Hello World. <Link href="/about">About</Link>
-    </div>
-  )
+  return <HelloWorld />;
 }
